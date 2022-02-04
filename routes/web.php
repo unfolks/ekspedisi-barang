@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Dashboard\Dashboard;
+use App\Http\Controllers\DashboardController;
+use App\Http\Livewire\Transaksi\Transaksi;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('admin/dashboard', dashboard::class)->name('admin.dashboard');
+Route::get('admin/dashboard', DashboardController::class)->name('admin.dashboard');
+Route::get('admin/transaksi', Transaksi::class)->name('admin.transaksi');
